@@ -1,0 +1,28 @@
+{
+  "name": "Bobby Slay",
+  "tagline": "Professional Chef and Business Owner",
+  "info": [
+    { 
+      "text": "bobbyslay@fakeemail.com",
+      "iconName": "mdi:email"
+    },
+    {
+      "text": "555-123-1234",
+      "iconName": "mdi:cellphone"
+    },
+    {
+      "text": "Las Vegas, UT",
+      "iconName": "mdi:location"
+    }
+  ],
+  "links": [
+    { 
+      "URL": "https://github.com/",
+      "iconName": "mdi:github"
+    },
+    {
+      "URL": "https://linkedin.com/",
+      "iconName": "mdi:linkedin"
+    }
+  ]
+}

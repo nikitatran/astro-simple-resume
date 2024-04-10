@@ -1,0 +1,54 @@
+---
+import "../styles.css";
+import jsonHeader from "../resume_sections/header_content.json";
+import { Icon } from 'astro-icon/components';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+const jsonInfo = jsonHeader.info;
+const jsonLinks = jsonHeader.links;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+
+	<!-- Personal info -->
+		<div class = "flex flex-row items-center mb-7">
+			<div class = "flex-auto">
+				<h1 class="text-5xl font-bold">{jsonHeader.name}</h1>
+				<h3 class = "mt-3">{jsonHeader.tagline}</h3>
+			</div>
+			
+			<div>
+				{jsonInfo?.map(info => (
+						<ul class = "text-right text-xs">
+							<div class="flex flex-row justify-end">
+								<Icon name={info.iconName} size={20} /><div style="margin-left: 3px">{info.text}</div>
+							</div>
+						</ul>
+				))}	
+				<div class = "flex flex-row justify-end mt-1">
+						{jsonLinks?.map(link => (
+								<Icon name={link.iconName} size={30} />
+						))}	
+				</div>
+			</div>
+		</div>
+
+		<!-- Resume sections start here -->
+		<article>
+			<slot />
+		</article>
+
+	<style></style>
+</html>
