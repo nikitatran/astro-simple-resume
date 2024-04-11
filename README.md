@@ -1,54 +1,30 @@
-# Astro Starter Kit: Basics
+# Simple Resume Theme for Astro
 
-```sh
-npm create astro@latest -- --template basics
-```
+> [!WARNING]
+> This project is a work in progress! Certain features may not work at the moment.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Simplistic text-based resume theme utilizing Markdown and Tailwind CSS. Built with Astro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Demo Site [Coming Soon]
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## How to edit
+Modify the `.md` and `user_info.json` files in the ``src/resume_sections`` folder with your information to populate the template. The contents within the `.md` files correspond to individual sections of your resume (eg. Work History, Education, Certifications, etc.)
 
-## 🚀 Project Structure
+`user_info.json` corresponds to the resume header where you put in your name, email, phone number, social media links, etc.
 
-Inside of your Astro project, you'll see the following folders and files:
+### How to make a new resume section
+Simply make a new `.md` file in the `src/resume_sections` folder and the page will render a new section.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### How to re-order template sections
+The resume sections are sorted by the filename of the `.md` files (descending order) in the ``src/resume_sections`` folder. I recommend prefixing your `.md` filenames with a number or by alphabet such as `1_sectionname` or `a_sectionname` so that it sorts correctly.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### How to rename tab name/title bar name
+In ``src/index.html``, change the `title` property of the `ResumeLayout` component to your desired text.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### How to change icons used in resume header
+By default, the resume header uses SVG icons from the Material Design Icons iconset. If you want to change the icons, go to the `user_info.json` file and change the `iconName`. You can go to [Iconify](https://icon-sets.iconify.design/mdi/) to figure out what icon name to use. Note that you must prefix the name with `mdi:` when referring to an icon from that set.
 
-Any static assets, like images, can be placed in the `public/` directory.
+If you want to use your own custom SVGs or use a different icon set from icon-sets, please refer to [astro-icon](https://github.com/natemoo-re/astro-icon?tab=readme-ov-file#usage) documentation.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# UI
+Images coming soon!
