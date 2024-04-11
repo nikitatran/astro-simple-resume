@@ -6,5 +6,6 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), icon()],
-  site: 'https://nikitatran.github.io'
+  site: 'https://nikitatran.github.io',
+  base: "/astro-simple-resume"
 });
