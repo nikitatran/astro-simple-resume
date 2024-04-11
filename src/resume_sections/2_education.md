@@ -1,6 +1,6 @@
 ---
-title: Education
+title: 🎓 Education
 ---
-| Great University | City, State       |
+| Great University | Dec 1990       |
 |-|-|
-Bachelor's Degree in Culinary Arts
+| Bachelor's Degree in Culinary Arts | City, State |

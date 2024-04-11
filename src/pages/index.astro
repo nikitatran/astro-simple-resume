@@ -6,10 +6,9 @@ const allResumeSections = await Astro.glob("../resume_sections/*.md");
 <ResumeLayout title="Y/N's Resume">
 		{
 			allResumeSections.map((section) => (
-				<ul style="border: 2px solid gray; margin-bottom: 20px">
-					<h2 id={section.frontmatter.title}>{section.frontmatter.title}</h2>
-					<section.Content />
-				</ul>
+					<h2 class="mb-2" id={section.frontmatter.title}>{section.frontmatter.title}</h2>
+					<div class="section"><section.Content /></div>
+	
 			))
 		}
 </ResumeLayout>

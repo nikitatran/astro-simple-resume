@@ -1,0 +1,26 @@
+---
+import { Icon } from 'astro-icon/components';
+import jsonHeader from "../resume_sections/user_info.json";
+---
+
+<div>
+  <div class = "flex flex-row items-end mb-3">
+    <div class="flex-auto">
+      <button class = "button">
+        <div class="iconLabel">
+          Jump to <Icon name="mdi:arrow-down-drop" size={20} />
+        </div>
+      </button>
+    </div>
+
+    <button class = "button">
+      <a href={jsonHeader.resumeDownloadURL}>
+        <div class="iconLabel">
+          Download <Icon name="mdi:download" size={20} />
+        </div>
+      </a>
+    </button>
+    <button class = "button"><Icon name="mdi:moon-and-stars" size={20} /></button>
+
+  </div>
+</div>

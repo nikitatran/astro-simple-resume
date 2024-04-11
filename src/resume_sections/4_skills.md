@@ -1,6 +1,6 @@
 ---
-title: skills
+title: ✨ Skills
 ---
-| Languages: | Java, Javascript, HTML, CSS |
+| Technical: | Menu Planning and Development, Culinary Technique Mastery, Food Safety and Sanitation Ingredient Sourcing and Procurement |
 |-|-|
-| **Tools:** | Postman, Splunk, AWS, ServiceNow, JMeter, Slack, Zoom, a, ,s s, d |
+| **Tools:** | Leadership, Adaptability, Creativity, Communication, Problem-solving, Teamwork |

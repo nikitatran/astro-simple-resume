@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+import "../styles.css";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Page not found</title>
+	</head>
+	<!-- https://stackoverflow.com/questions/55056513/vertical-align-with-tailwind-css-across-full-screen-div -->
+	<div class="flex h-screen">
+		<div class="m-auto">
+			<div class = section>
+				<center>
+					<div class = "iconLabel">
+						<Icon name="mdi:error" size = {60}/>
+						<h1 class = "ml-2">Page not found</h1>
+					</div>
+					<a href = "index.html"> 
+						<button class="button mt-7">
+							<div class="iconLabel">
+								<Icon name="mdi:arrow-back" />
+								Back to homepage
+							</div>
+						</button> 
+					</a>
+				</center>
+			</div>
+		</div>
+	</div>
+	<style></style>
+</html>

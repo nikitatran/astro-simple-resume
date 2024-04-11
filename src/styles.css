@@ -1,25 +1,14 @@
-:root {
-  --accent: 136, 58, 234;
-  --accent-light: 224, 204, 250;
-  --accent-dark: 49, 10, 101;
-  --accent-gradient: linear-gradient(
-    45deg,
-    rgb(var(--accent)),
-    rgb(var(--accent-light)) 30%,
-    white 60%
-  );
-}
 html {
   font-family: system-ui, sans-serif;
-  background: white;
   background-size: 224px;
   margin: auto;
   padding: 1rem;
-  width: 800px;
+  width: 1000px;
   max-width: calc(100% - 2rem);
   color: black;
   font-size: 20px;
   line-height: 1.6;
+  @apply bg-slate-100
 }
 code {
   font-family:
@@ -33,6 +22,22 @@ code {
     monospace;
 }
 
+h1 {
+  @apply text-5xl font-bold text-slate-950
+}
+
+h2 {
+  @apply text-xl font-bold text-slate-800
+}
+
+h3 {
+  @apply text-lg mt-3 text-slate-500
+}
+
+hr {
+  @apply mx-4 my-5 border border-dashed border-slate-300
+}
+
 table {
   @apply w-full
 }
@@ -42,9 +47,39 @@ table th:last-child, td:last-child {
 }
 
 table th:first-child {
-  @apply text-left
+  @apply text-left 
 }
 
+table td:first-child, th:first-child {
+  @apply align-text-top
+}
+
+ul {
+  @apply list-disc list-outside pl-10
+}
+
+/* --- CUSTOM --- */
+
 .button {
-  @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 ml-2
+  @apply text-white bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:ring-slate-300 font-medium rounded-full text-xs px-4 py-2 dark:bg-slate-600 dark:hover:bg-slate-700 focus:outline-none dark:focus:ring-slate-800 ml-2
+}
+
+.resume-wrapper {
+  @apply p-12 rounded-lg bg-white border-4 border-solid border-slate-300
+}
+
+.section {
+  @apply border-2 border-solid border-slate-200 mt-3 mb-10 p-5 rounded-lg bg-slate-50 text-slate-600
+}
+
+.section:last-child {
+  @apply mb-0
+}
+
+.iconLabel {
+  @apply flex flex-row items-center justify-end
+}
+
+.user-info-links {
+  @apply text-right text-xs text-slate-700
 }

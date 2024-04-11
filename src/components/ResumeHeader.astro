@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon/components';
+import jsonHeader from "../resume_sections/user_info.json";
+const jsonInfo = jsonHeader.info;
+const jsonLinks = jsonHeader.links;
+---
+
+<div class = "flex flex-row items-start mb-10 gap-x-10">
+  <div class = "flex-auto">
+    <h1>{jsonHeader.name}</h1>
+    <h3>{jsonHeader.tagline}</h3>
+  </div>
+  
+  <div class = "mt-3">
+    {jsonInfo?.map(info => (
+        <ul class = "user-info-links">
+          <div class="iconLabel">
+            <Icon name={info.iconName} size={20} /><div style="margin-left: 3px">{info.text}</div>
+          </div>
+        </ul>
+    ))}	
+    <div class = "flex flex-row justify-end mt-1 text-slate-400">
+        {jsonLinks?.map(link => (
+            <Icon name={link.iconName} size={30} />
+        ))}	
+    </div>
+  </div>
+</div>

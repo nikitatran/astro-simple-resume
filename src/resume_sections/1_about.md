@@ -1,4 +1,4 @@
 ---
-title: About
+title: 📝 About
 ---
-Bobby Slay is an American celebrity chef, restaurateur, food writer, and reality television personality. Flay is the owner and executive chef of several restaurants and franchises, including Bobby's Burger Palace, Bobby's Burgers, and Amalfi.
+Bobby Slayington, a seasoned head chef, brings proven expertise and innovative strategies to kitchens. His leadership has led to a 20% revenue increase through menu overhauls and a 15% expense reduction through cost-saving initiatives. With a focus on quality and creativity, he elevates dining experiences in any culinary establishment.
