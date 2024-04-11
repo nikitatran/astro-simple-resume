@@ -22,9 +22,9 @@ The resume sections are sorted by the filename of the `.md` files (descending or
 In ``src/index.html``, change the `title` property of the `ResumeLayout` component to your desired text.
 
 ### How to change icons used in resume header
-By default, the resume header uses SVG icons from the Material Design Icons iconset. If you want to change the icons, go to the `user_info.json` file and change the `iconName`. You can go to [Iconify](https://icon-sets.iconify.design/mdi/) to figure out what icon name to use. Note that you must prefix the name with `mdi:` when referring to an icon from that set.
+By default, the resume header uses SVG icons from the Material Design Icons iconset. If you want to change the icons, go to the `user_info.json` file and change the `iconName` value. You can go to [Iconify](https://icon-sets.iconify.design/mdi/) to figure out what icon name to use. Note that you must prefix the name with `mdi:` when referring to an icon from that set.
 
-If you want to use your own custom SVGs or use a different icon set from icon-sets, please refer to [astro-icon](https://github.com/natemoo-re/astro-icon?tab=readme-ov-file#usage) documentation.
+If you want to use your own custom SVGs or use a different icon set from Iconify, please refer to [astro-icon](https://github.com/natemoo-re/astro-icon?tab=readme-ov-file#usage) documentation.
 
 # UI
 Images coming soon!
