@@ -1,14 +1,18 @@
 ---
 import { Icon } from 'astro-icon/components';
 import jsonHeader from "../resume_sections/user_info.json";
+
+const iconSizeNormal = 20;
+const iconSize2XL = 25;
 ---
 
-<div>
+<div class="pt-[1rem] px-[1rem] md:p-0 2xl:hidden">
   <div class = "flex flex-row items-end mb-3">
     <div class="flex-auto">
       <button class = "button">
         <div class="iconLabel">
-          Jump to <Icon name="mdi:arrow-down-drop" size={20} />
+          <div class="hidden sm:block">Jump to</div>
+          <Icon name="mdi:arrow-down-drop" size={iconSizeNormal} />
         </div>
       </button>
     </div>
@@ -16,11 +20,37 @@ import jsonHeader from "../resume_sections/user_info.json";
     <button class = "button">
       <a href={jsonHeader.resumeDownloadURL}>
         <div class="iconLabel">
-          Download <Icon name="mdi:download" size={20} />
+          <div class="hidden sm:block">Download</div>
+          <Icon name="mdi:download" size={iconSizeNormal} />
         </div>
       </a>
     </button>
-    <button class = "button"><Icon name="mdi:moon-and-stars" size={20} /></button>
+    <button class = "button"><Icon name="mdi:moon-and-stars" size={iconSizeNormal} /></button>
+
+  </div>
+</div>
+
+<!-- 2XL -->
+<div class="pt-[1rem] px-[1rem] md:p-0 hidden 2xl:block">
+  <div class = "flex flex-row items-end mb-3">
+    <div class="flex-auto">
+      <button class = "button">
+        <div class="iconLabel">
+          <div class="hidden sm:block">Jump to</div>
+          <Icon name="mdi:arrow-down-drop" size={iconSize2XL} />
+        </div>
+      </button>
+    </div>
+
+    <button class = "button">
+      <a href={jsonHeader.resumeDownloadURL}>
+        <div class="iconLabel">
+          <div class="hidden sm:block">Download</div>
+          <Icon name="mdi:download" size={iconSize2XL} />
+        </div>
+      </a>
+    </button>
+    <button class = "button"><Icon name="mdi:moon-and-stars" size={iconSize2XL} /></button>
 
   </div>
 </div>

@@ -5,13 +5,30 @@ const jsonInfo = jsonHeader.info;
 const jsonLinks = jsonHeader.links;
 ---
 
-<div class = "flex flex-row items-start mb-10 gap-x-10">
+<div class = "flex flex-row items-start mb-10 sm:gap-0 gap-x-10">
   <div class = "flex-auto">
-    <h1>{jsonHeader.name}</h1>
-    <h3>{jsonHeader.tagline}</h3>
+    <h1 class="text-center md:text-left">{jsonHeader.name}</h1>
+    <h3 class="text-center md:text-left mt-5">{jsonHeader.tagline}</h3>
+      <!-- SMALL BREAKPOINT -->
+    <div class = "mt-5 md:mt-3 md:hidden sm:block">
+      <div class="flex flex-row flex-wrap justify-center gap-y-2 gap-x-4">
+        {jsonInfo?.map(info => (
+          <div class="iconLabel user-info-links">
+            <Icon name={info.iconName} size={20} /><div style="margin-left: 3px">{info.text}</div>
+          </div>
+        ))}
+      </div>
+
+      <div class = "flex flex-row flex-wrap justify-center mt-2 md:mt-1 text-slate-400">
+          {jsonLinks?.map(link => (
+              <Icon name={link.iconName} size={30} />
+          ))}	
+      </div>
+    </div>
   </div>
-  
-  <div class = "mt-3">
+
+  <!-- MEDIUM/LARGE BREAKPOINT -->
+  <div class = "mt-3 hidden md:block 2xl:hidden">
     {jsonInfo?.map(info => (
         <ul class = "user-info-links">
           <div class="iconLabel">
@@ -22,6 +39,22 @@ const jsonLinks = jsonHeader.links;
     <div class = "flex flex-row justify-end mt-1 text-slate-400">
         {jsonLinks?.map(link => (
             <Icon name={link.iconName} size={30} />
+        ))}	
+    </div>
+  </div>
+
+  <!-- 2XL BREAKPOINT -->
+  <div class = "mt-3 hidden 2xl:block">
+    {jsonInfo?.map(info => (
+        <ul class = "user-info-links">
+          <div class="iconLabel">
+            <Icon name={info.iconName} size={23} /><div style="margin-left: 3px">{info.text}</div>
+          </div>
+        </ul>
+    ))}	
+    <div class = "flex flex-row justify-end mt-1 text-slate-400">
+        {jsonLinks?.map(link => (
+            <Icon name={link.iconName} size={35} />
         ))}	
     </div>
   </div>
