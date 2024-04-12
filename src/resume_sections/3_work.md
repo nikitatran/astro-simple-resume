@@ -16,4 +16,4 @@ title: 💼 Work History
 |-|-|
 | Mesa Grill | Las Vegas, UT  |
 - cooking
-- slaying
+- slaying!
