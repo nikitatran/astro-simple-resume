@@ -4,20 +4,7 @@ import NavBar from '../components/NavBar.astro';
 import Footer from '../components/Footer.astro';
 import ResumeHeader from '../components/ResumeHeader.astro';
 
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-
-dayjs.extend(utc);
-
-// const lastModified = dayjs()
-//   .utc(Astro.props.frontmatter.lastModified)
-//   .format("HH:mm:ss DD MMMM YYYY UTC");
-
-const { title, lastModified } = Astro.props;
-
-const lastModified2 = dayjs()
-  .utc(lastModified)
-  .format("HH:mm:ss DD MMMM YYYY UTC");
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -37,7 +24,6 @@ const lastModified2 = dayjs()
 		<ResumeHeader />
 		<article>
 			<slot />
-			<p>{lastModified2}</p>
 		</article>
 	</div>
 

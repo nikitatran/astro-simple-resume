@@ -1,4 +1,14 @@
 ---
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+
+dayjs.extend(utc);
+
+const { lastModified } = Astro.props;
+
+const lastModifiedFormatted = dayjs()
+  .utc(lastModified)
+  .format("HH:mm:ss DD MMMM YYYY UTC");
 ---
 
 <div class="pb-[1rem] px-[1rem] md:p-0 break-normal">
@@ -7,7 +17,7 @@
       Made with <a href="https://github.com/nikitatran/astro-simple-resume">Simple Resume Theme</a>
     </div>
 
-    <div class="text-right">Last updated mm/dd/yyyy</div>
+    <div class="text-right">Last updated {lastModifiedFormatted}</div>
 
   </div>
 </div>
