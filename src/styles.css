@@ -116,7 +116,7 @@ blockquote {
     rounded-full 
     text-xs 2xl:text-sm
     px-4 py-2
-    dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:outline-none dark:focus:ring-slate-800 ml-2
+    dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:outline-none dark:focus:ring-slate-800 
 }
 
 .resume-wrapper {
@@ -148,4 +148,12 @@ blockquote {
 
 .user-info-links {
   @apply text-xs 2xl:text-sm text-slate-700 md:pl-5
+}
+
+#dropdown-menu.show, #dropdown-icon-up.show {
+  display: block;
+}
+
+#dropdown-icon-down.hide {
+  display: none;
 }

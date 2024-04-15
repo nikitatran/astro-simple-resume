@@ -1,56 +1,45 @@
 ---
 import { Icon } from 'astro-icon/components';
 import jsonHeader from "../resume_sections/user_info.json";
+import DropdownMenu from './DropdownMenu.astro';
 
 const iconSizeNormal = 20;
 const iconSize2XL = 25;
 ---
 
-<div class="pt-[1rem] px-[1rem] md:p-0 2xl:hidden">
-  <div class = "flex flex-row items-end mb-3">
+<div class="pt-[1rem] px-[1rem] md:p-0">
+  <div class = "flex flex-row items-end mb-3 gap-x-2">
     <div class="flex-auto">
-      <button class = "button">
+      <button id = "dropdown-button" class = "button">
         <div class="iconLabel">
           <div class="hidden sm:block">Jump to</div>
-          <Icon name="mdi:arrow-down-drop" size={iconSizeNormal} />
+          <div id = "dropdown-icon-down">
+            <Icon class = "2xl:hidden" name="mdi:arrow-down-drop" size={iconSizeNormal} />
+            <Icon class = "hidden 2xl:block" name="mdi:arrow-down-drop" size={iconSize2XL} />
+          </div>
+          <div id = "dropdown-icon-up" class = "hidden">
+            <Icon class = "2xl:hidden" name="mdi:arrow-drop-up" size={iconSizeNormal} />
+            <Icon class = "hidden 2xl:block" name="mdi:arrow-drop-up" size={iconSize2XL} />
+          </div>
         </div>
       </button>
     </div>
 
-    <button class = "button">
-      <a href={jsonHeader.resumeDownloadURL}>
-        <div class="iconLabel">
-          <div class="hidden sm:block">Download</div>
-          <Icon name="mdi:download" size={iconSizeNormal} />
-        </div>
-      </a>
-    </button>
-    <button class = "button"><Icon name="mdi:moon-and-stars" size={iconSizeNormal} /></button>
-
-  </div>
-</div>
-
-<!-- 2XL -->
-<div class="pt-[1rem] px-[1rem] md:p-0 hidden 2xl:block">
-  <div class = "flex flex-row items-end mb-3">
-    <div class="flex-auto">
+    <a class="border-none" href={jsonHeader.resumeDownloadURL}>
       <button class = "button">
         <div class="iconLabel">
-          <div class="hidden sm:block">Jump to</div>
-          <Icon name="mdi:arrow-down-drop" size={iconSize2XL} />
+          <div class="hidden sm:block">Download</div>
+          <Icon class = "2xl:hidden" name="mdi:download" size={iconSizeNormal} />
+          <Icon class = "hidden 2xl:block" name="mdi:download" size={iconSize2XL} />
         </div>
-      </button>
-    </div>
+      </button> 
+    </a>
 
     <button class = "button">
-      <a href={jsonHeader.resumeDownloadURL}>
-        <div class="iconLabel">
-          <div class="hidden sm:block">Download</div>
-          <Icon name="mdi:download" size={iconSize2XL} />
-        </div>
-      </a>
+      <Icon class = "2xl:hidden" name="mdi:moon-and-stars" size={iconSizeNormal} />
+      <Icon class = "hidden 2xl:block" name="mdi:moon-and-stars" size={iconSize2XL} />
     </button>
-    <button class = "button"><Icon name="mdi:moon-and-stars" size={iconSize2XL} /></button>
-
   </div>
+
+  <DropdownMenu />
 </div>
