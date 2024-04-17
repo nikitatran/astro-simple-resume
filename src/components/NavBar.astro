@@ -23,9 +23,10 @@ const iconSize2XL = 25;
           </div>
         </div>
       </button>
+      <DropdownMenu />
     </div>
 
-    <a class="border-none" href={jsonHeader.resumeDownloadURL}>
+    <a href={jsonHeader.resumeDownloadURL}>
       <button class = "button">
         <div class="iconLabel">
           <div class="hidden sm:block">Download</div>
@@ -35,11 +36,10 @@ const iconSize2XL = 25;
       </button> 
     </a>
 
-    <button class = "button">
-      <Icon class = "2xl:hidden" name="mdi:moon-and-stars" size={iconSizeNormal} />
-      <Icon class = "hidden 2xl:block" name="mdi:moon-and-stars" size={iconSize2XL} />
+    <button class = "button" id="themeToggle">
+      <Icon class = "2xl:hidden" name="mdi:sun-moon-stars" size={iconSizeNormal} />
+      <Icon class = "hidden 2xl:block" name="mdi:sun-moon-stars" size={iconSize2XL} />
     </button>
-  </div>
-
-  <DropdownMenu />
 </div>
+
+<script src = "../scripts/themeToggle.js"></script>

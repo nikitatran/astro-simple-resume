@@ -1,44 +1,50 @@
 html {
-  font-family: system-ui, sans-serif;
-  background-size: 224px;
-  margin: auto;
-  color: black;
-  font-size: 20px;
   @apply 
-    bg-slate-100 
+    bg-slate-100
     w-full md:w-[800px] lg:w-[1000px] 2xl:w-[1250px]
     md:p-[2rem]
+    font-sans
+    m-auto
+    text-xl
 }
+
+html.dark {
+  @apply bg-slate-950
+}
+
+/* CODE LINES AND BLOCKS */
+pre {
+  @apply rounded-lg p-5
+}
+
+pre > code{
+  @apply font-normal p-0 bg-transparent dark:bg-transparent
+}
+
 code {
-  font-family:
-    Menlo,
-    Monaco,
-    Lucida Console,
-    Liberation Mono,
-    DejaVu Sans Mono,
-    Bitstream Vera Sans Mono,
-    Courier New,
-    monospace;
+  @apply 
+    font-mono font-semibold py-1 px-2 rounded-lg bg-slate-200 dark:bg-slate-600
 }
+/*  */
 
 h1 {
   @apply 
-    text-4xl xs:text-5xl md:text-6xl 2xl:text-7xl
-    font-bold 
-    text-slate-950
+    text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl
+    font-extrabold 
+    text-slate-950 dark:text-slate-50
 }
 
 h2 {
   @apply 
     text-xl md:text-2xl 2xl:text-3xl
     font-bold 
-    text-slate-800
+    text-slate-800 dark:text-slate-200
 }
 
 h3 {
   @apply
     text-lg md:text-xl 2xl:text-2xl
-    text-slate-500
+    text-slate-500 dark:text-slate-400
 }
 
 hr {
@@ -54,7 +60,7 @@ p {
 }
 
 table {
-  @apply w-full
+  @apply w-full 
 }
 
 table th:last-child, td:last-child {
@@ -85,8 +91,12 @@ ul.contains-task-list {
   @apply list-none
 }
 
+li {
+  @apply mt-2
+}
+
 a {
-  @apply border-b-2 border-solid border-blue-400
+  @apply font-semibold underline underline-offset-2
 }
 
 /* 
@@ -101,9 +111,23 @@ input[type="checkbox"] {
 
 blockquote {
   border-left: 5px;
-  @apply pl-3 border-solid border-blue-400
+  @apply px-3 py-1 border-solid border-slate-400 italic font-semibold bg-slate-200 dark:bg-slate-700 rounded-md
 }
 
+blockquote > p {
+  display:inline;
+}
+
+blockquote > p:before {
+  content: open-quote;
+}
+blockquote > p:after {
+  content: close-quote;
+}
+
+mark {
+  @apply px-1 bg-red-100 dark:bg-red-700 dark:text-slate-100
+}
 
 /* --- CUSTOM --- */
 
@@ -111,30 +135,34 @@ blockquote {
   @apply 
     text-white 
     bg-slate-700 hover:bg-slate-800 
-    focus:ring-4 focus:ring-slate-300 
+    focus:ring-4 focus:ring-slate-600 
     font-medium 
     rounded-full 
     text-xs 2xl:text-sm
     px-4 py-2
-    dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:outline-none dark:focus:ring-slate-800 
+    dark:bg-slate-600 dark:hover:bg-slate-500 dark:focus:outline-none dark:focus:ring-slate-400 
 }
 
 .resume-wrapper {
   @apply 
   px-3 sm:px-5 py-12 md:p-12 
   md:rounded-lg 
-  bg-white 
-  border-y-4 md:border-4 border-solid border-slate-300 
+  bg-white dark:bg-slate-900
+  border-y-4 md:border-4 border-solid border-slate-300 dark:border-slate-800
   drop-shadow-md
+}
+
+.sectionTitle {
+  @apply pl-3 xs:pl-0 mb-2
 }
 
 .section {
   @apply 
-    border-2 border-solid border-slate-200 
+    border-2 border-solid border-slate-200 dark:border-slate-700
     mt-3 mb-10 p-5 
     rounded-lg 
-    bg-slate-50 
-    text-slate-600
+    bg-slate-50 dark:bg-slate-800
+    text-slate-600 dark:text-slate-300
 }
 
 .section:last-child {
@@ -146,8 +174,12 @@ blockquote {
   md:justify-end
 }
 
+.iconSocials {
+  @apply text-slate-400 dark:text-slate-600
+}
+
 .user-info-links {
-  @apply text-xs 2xl:text-sm text-slate-700 md:pl-5
+  @apply text-xs 2xl:text-sm text-slate-700 dark:text-slate-400 pb-1 md:pl-5
 }
 
 #dropdown-menu.show, #dropdown-icon-up.show {
@@ -156,4 +188,28 @@ blockquote {
 
 #dropdown-icon-down.hide {
   display: none;
+}
+
+#dropdown-menu {
+  @apply bg-slate-200 dark:bg-slate-600 border-4 border-solid border-slate-700 dark:border-slate-950 rounded-lg w-fit p-2 mt-2 z-10 absolute drop-shadow-lg hidden dark:text-white
+}
+
+.footer {
+  @apply text-slate-400 dark:text-slate-500
+}
+
+.noLinkStyle {
+  @apply no-underline font-normal
+}
+
+#yourName {
+  @apply text-center md:text-left
+}
+
+#yourTagline {
+  @apply text-center md:text-left mt-5
+}
+
+.dropdown-menu-links {
+  @apply noLinkStyle hover:bg-slate-400 hover:rounded-lg px-2 py-1
 }
