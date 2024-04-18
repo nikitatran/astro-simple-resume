@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import "../styles.css";
+import "../styles.css"; 
 ---
 
 <!doctype html>
@@ -10,15 +10,18 @@ import "../styles.css";
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>Page not found</title>
+		<title>Page not found</title>  
 	</head>
 	<!-- https://stackoverflow.com/questions/55056513/vertical-align-with-tailwind-css-across-full-screen-div -->
 	<div class="flex h-screen">
 		<div class="m-auto">
 			<div class = resume-wrapper>
 				<center>
-						<div class = "iconLabel flex-wrap">
+						<div class = "iconLabel flex-wrap text-black dark:text-white">
 							<Icon name="mdi:error" size = {60}/>
 							<h1 class = "ml-2">Page not found</h1>
 						</div>
@@ -36,3 +39,5 @@ import "../styles.css";
 	</div>
 	<style></style>
 </html>
+
+<script src="../scripts/themeToggle.js"></script>

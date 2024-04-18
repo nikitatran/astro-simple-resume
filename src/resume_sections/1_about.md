@@ -20,7 +20,7 @@ body
 
 <br>
 
-**Bold text**
+Do you think anyone would notice that the **bold text right here** is different from the rest?
 
 *Italicized text*
 
@@ -63,7 +63,7 @@ a <mark> highlight</mark> a
 
 <br>
 
-a blabla [HYPERLINK](http://google.com) ablabla 
+a blabla [hyperLINK](http://google.com) ablabla 
 
 asdfasdfasdasdfasdfasdfasdf
 

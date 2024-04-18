@@ -3,9 +3,9 @@ html {
     bg-slate-100
     w-full md:w-[800px] lg:w-[1000px] 2xl:w-[1250px]
     md:p-[2rem]
-    font-sans
     m-auto
     text-xl
+    transition-all
 }
 
 html.dark {
@@ -23,21 +23,21 @@ pre > code{
 
 code {
   @apply 
-    font-mono font-semibold py-1 px-2 rounded-lg bg-slate-200 dark:bg-slate-600
+    font-mono font-semibold py-1 px-2 rounded-md bg-slate-200 dark:bg-slate-600
 }
 /*  */
 
 h1 {
   @apply 
     text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl
-    font-extrabold 
+    font-extrabold
     text-slate-950 dark:text-slate-50
 }
 
 h2 {
   @apply 
     text-xl md:text-2xl 2xl:text-3xl
-    font-bold 
+    font-bold
     text-slate-800 dark:text-slate-200
 }
 
@@ -45,6 +45,10 @@ h3 {
   @apply
     text-lg md:text-xl 2xl:text-2xl
     text-slate-500 dark:text-slate-400
+}
+
+h1, h2, h3 {
+  @apply font-manrope tracking-tight
 }
 
 hr {
@@ -60,7 +64,7 @@ p {
 }
 
 table {
-  @apply w-full 
+  @apply w-full
 }
 
 table th:last-child, td:last-child {
@@ -68,7 +72,7 @@ table th:last-child, td:last-child {
 }
 
 table th:first-child {
-  @apply text-left 
+  @apply text-left font-normal
 }
 
 table td:first-child, th:first-child {
@@ -96,7 +100,11 @@ li {
 }
 
 a {
-  @apply font-semibold underline underline-offset-2
+  @apply font-semibold underline underline-offset-2 font-manrope tracking-tight transition-all
+}
+
+a:hover:not(.dropdown-menu-links):not(#download):not(.iconSocials > a:hover) {
+  @apply bg-slate-200 dark:bg-slate-500 rounded-sm text-slate-950
 }
 
 /* 
@@ -129,6 +137,10 @@ mark {
   @apply px-1 bg-red-100 dark:bg-red-700 dark:text-slate-100
 }
 
+strong {
+  @apply font-manrope font-extrabold tracking-tight
+}
+
 /* --- CUSTOM --- */
 
 .button {
@@ -136,11 +148,26 @@ mark {
     text-white 
     bg-slate-700 hover:bg-slate-800 
     focus:ring-4 focus:ring-slate-600 
-    font-medium 
+    font-semibold 
     rounded-full 
     text-xs 2xl:text-sm
     px-4 py-2
     dark:bg-slate-600 dark:hover:bg-slate-500 dark:focus:outline-none dark:focus:ring-slate-400 
+    font-manrope
+    transition-all
+}
+
+#backtotop {
+  @apply 
+    bg-[hsl(216,33%,55%)] dark:bg-[hsl(216,28%,45%)] 
+    p-3 rounded-full text-white dark:text-slate-50
+    transition-all
+    fixed bottom-0 right-0 mr-5 mb-5
+    drop-shadow-md
+}
+
+#backtotop:hover {
+  @apply -translate-y-2 opacity-100
 }
 
 .resume-wrapper {
@@ -178,10 +205,19 @@ mark {
   @apply text-slate-400 dark:text-slate-600
 }
 
+.iconSocials > a:hover {
+  @apply text-slate-950 dark:text-slate-50
+}
+
 .user-info-links {
   @apply text-xs 2xl:text-sm text-slate-700 dark:text-slate-400 pb-1 md:pl-5
 }
 
+.user-info-links > a {
+  @apply font-sans tracking-normal
+}
+
+/* DROPDOWN MENU */
 #dropdown-menu.show, #dropdown-icon-up.show {
   display: block;
 }
@@ -193,6 +229,12 @@ mark {
 #dropdown-menu {
   @apply bg-slate-200 dark:bg-slate-600 border-4 border-solid border-slate-700 dark:border-slate-950 rounded-lg w-fit p-2 mt-2 z-10 absolute drop-shadow-lg hidden dark:text-white
 }
+
+.dropdown-menu-links {
+  @apply 
+    no-underline hover:bg-slate-300 hover:dark:bg-slate-700 hover:rounded-lg px-2 py-1 font-semibold
+}
+/*  */
 
 .footer {
   @apply text-slate-400 dark:text-slate-500
@@ -210,6 +252,3 @@ mark {
   @apply text-center md:text-left mt-5
 }
 
-.dropdown-menu-links {
-  @apply noLinkStyle hover:bg-slate-400 hover:rounded-lg px-2 py-1
-}

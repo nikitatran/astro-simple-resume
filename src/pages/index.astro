@@ -3,7 +3,7 @@ import ResumeLayout from '../layouts/ResumeLayout.astro';
 const allResumeSections = await Astro.glob("../resume_sections/*.md");
 ---
 <!-- https://stackoverflow.com/questions/74504239/how-to-render-multiple-markdown-files-on-one-page-in-astro -->
-<ResumeLayout title="Y/N's Resume">
+<ResumeLayout>
 		{
 			allResumeSections.map((section) => (
 					<h2 class="sectionTitle" id={section.frontmatter.title}>{section.frontmatter.title}</h2>

@@ -1,7 +1,7 @@
 ---
 title: 💼 Work History
 ---
-| Head Chef | 2021-2023       |
+| **Head Chef** | 2021-2023       |
 |-|-|
 | Mesa Grill | Las Vegas, UT  |
 - Proven track record of leading kitchen teams to deliver exceptional culinary experiences through innovation and efficiency, driving customer satisfaction and loyalty.
@@ -12,7 +12,7 @@ title: 💼 Work History
 
 ---
 
-| Chef | 2020-2021       |
+| **Chef** | 2020-2021       |
 |-|-|
 | Mesa Grill | Las Vegas, UT  |
 - cooking

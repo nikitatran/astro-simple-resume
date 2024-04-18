@@ -1,6 +1,31 @@
 ---
 import { Icon } from 'astro-icon/components';
-import jsonHeader from "../resume_sections/user_info.json";
+
+interface Props {
+  jsonHeader: JsonHeaderType;
+}
+
+interface JsonHeaderType {
+  name: string;
+  tagline: string;
+  resumeDownloadURL: string;
+  info: InfoType[];
+  links: LinkType[];
+}
+
+interface LinkType {
+  URL: string;
+  iconName: string;
+}
+
+interface InfoType {
+  text: string;
+  iconName: string;
+  optionalURL: string;
+}
+
+const { jsonHeader } = Astro.props;
+
 const jsonInfo = jsonHeader.info;
 const jsonLinks = jsonHeader.links;
 
@@ -11,7 +36,7 @@ const iconSizeInfo2XL = 23;
 const iconSizeSocials2XL = 35; 
 ---
 
-<div class = "flex items-start mb-10 sm:gap-0 gap-x-10">
+<div id = "resumeheader" class = "flex items-start mb-10 sm:gap-0 gap-x-10">
   <div class = "flex-auto">
     <h1 id = "yourName">{jsonHeader.name}</h1>
     <h3 id = "yourTagline">{jsonHeader.tagline}</h3>
@@ -29,9 +54,9 @@ const iconSizeSocials2XL = 35;
         ))}
       </div>
 
-      <div class = "flex flex-row flex-wrap justify-center mt-2 iconSocials">
+      <div class = "flex flex-row flex-wrap justify-center mt-2 gap-x-1 iconSocials">
           {jsonLinks?.map(link => (
-              <Icon name={link.iconName} size={iconSizeSocials} />
+              <a href={link.URL}><Icon name={link.iconName} size={iconSizeSocials} /></a>
           ))}	
       </div>
     </div>
