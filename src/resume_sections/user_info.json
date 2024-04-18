@@ -2,7 +2,8 @@
   "name": "Bobby Slayington",
   "tagline": "Professional Chef and Business Owner",
   "pageTitle": "Simple Resume Theme",
-  "resumeDownloadURL": "https://drive.google.com/",
+  "faviconFilePath": "/favicon.svg",
+  "resumeDownloadURL": "https://github.com/nikitatran/astro-simple-resume",
   "info": [
     { 
       "text": "bobbyslay@fakeemail.com",

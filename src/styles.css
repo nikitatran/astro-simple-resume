@@ -6,6 +6,7 @@ html {
     m-auto
     text-xl
     transition-all
+    scroll-smooth
 }
 
 html.dark {
@@ -67,16 +68,24 @@ table {
   @apply w-full
 }
 
+table th {
+  @apply font-normal
+}
+
 table th:last-child, td:last-child {
-  @apply text-right font-normal
+  @apply text-right
 }
 
 table th:first-child {
-  @apply text-left font-normal
+  @apply text-left
 }
 
 table td:first-child, th:first-child {
   @apply align-text-top
+}
+
+table td:not(td:first-child):not(td:last-child) {
+  @apply text-center
 }
 
 ul, ol {
@@ -227,7 +236,7 @@ strong {
 }
 
 #dropdown-menu {
-  @apply bg-slate-200 dark:bg-slate-600 border-4 border-solid border-slate-700 dark:border-slate-950 rounded-lg w-fit p-2 mt-2 z-10 absolute drop-shadow-lg hidden dark:text-white
+  @apply bg-slate-200 dark:bg-slate-600 border-4 border-solid border-slate-700 dark:border-slate-950 rounded-lg w-fit p-2 mt-2 z-10 absolute drop-shadow-lg dark:text-white transition-all
 }
 
 .dropdown-menu-links {

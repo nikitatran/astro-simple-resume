@@ -15,5 +15,6 @@ title: 💼 Work History
 | **Chef** | 2020-2021       |
 |-|-|
 | Mesa Grill | Las Vegas, UT  |
-- cooking
-- slaying
+- Demonstrated expertise in menu planning and culinary technique, consistently delivering high-quality dishes that exceed customer expectations.
+- Proven ability to lead and mentor kitchen teams, fostering a collaborative environment focused on efficiency and excellence.
+- Strong understanding of food safety protocols, ingredient sourcing, and cost management, ensuring compliance with industry standards while optimizing profitability.
