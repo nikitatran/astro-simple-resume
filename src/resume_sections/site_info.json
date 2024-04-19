@@ -1,0 +1,7 @@
+{
+  "pageTitle": "Simple Resume Theme",
+  "pageDescription": "Simple Resume Theme Demo Site",
+  "faviconFilePath": "/favicon.svg",
+  "domainName": "https://nikitatran.github.io",
+  "basePath": "/astro-simple-resume"
+}

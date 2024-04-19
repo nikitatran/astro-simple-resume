@@ -112,7 +112,7 @@ a {
   @apply font-semibold underline underline-offset-2 font-manrope tracking-tight transition-all
 }
 
-a:hover:not(.dropdown-menu-links):not(#download):not(.iconSocials > a:hover) {
+a:hover:not(.dropdown-menu-links):not(#download):not(.iconSocials > a:hover):not(#backtohome) {
   @apply bg-slate-200 dark:bg-slate-500 rounded-sm text-slate-950
 }
 

@@ -2,8 +2,6 @@
 
 const dropdownMenu = document.getElementById("dropdown-menu");
 
-dropdownMenu.classList.add('opacity-0', 'invisible', 'translate-y-2')
-
 document.getElementById("dropdown-button").onclick = () => toggleMenu();
 
 function toggleMenu() {

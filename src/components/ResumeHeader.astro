@@ -1,27 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
+import type { JsonHeaderType } from '../types/resumeHeaderTypes';
 
 interface Props {
   jsonHeader: JsonHeaderType;
-}
-
-interface JsonHeaderType {
-  name: string;
-  tagline: string;
-  resumeDownloadURL: string;
-  info: InfoType[];
-  links: LinkType[];
-}
-
-interface LinkType {
-  URL: string;
-  iconName: string;
-}
-
-interface InfoType {
-  text: string;
-  iconName: string;
-  optionalURL?: string;
 }
 
 const { jsonHeader } = Astro.props;

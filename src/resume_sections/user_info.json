@@ -1,8 +1,6 @@
 {
   "name": "Bobby Slayington",
   "tagline": "Professional Chef and Business Owner",
-  "pageTitle": "Simple Resume Theme",
-  "faviconFilePath": "/favicon.svg",
   "resumeDownloadURL": "https://github.com/nikitatran/astro-simple-resume",
   "info": [
     { 

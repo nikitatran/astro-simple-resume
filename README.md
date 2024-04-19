@@ -17,9 +17,8 @@ Feel free to report any issues [here](https://github.com/nikitatran/astro-simple
 - Auto-detects your system theme on first load
 - Dark/Light mode toggle
 - Add/remove content (e.g. resume sections, header links) without having to change the HTML code manually
-- Everything you need to edit is located in one folder*
-
-<sup>* except for the favicon and astro config</sup>
+- Custom page for 404 Page Not Found
+- Everything you need to edit is located in one folder
 
 ## UI
 Images coming soon!
@@ -28,15 +27,22 @@ Images coming soon!
 Clone this repository by using the "Use this template" button at the top of the page, by following [this link](https://github.com/new?template_name=astro-simple-resume&template_owner=nikitatran), or by running this: `npm create astro@latest -- --template nikita-tran/astro-simple-resume`
 
 > [!IMPORTANT]
-> In order for your website to deploy to the correct URL, please go to the `astro.config.mjs` file and modify the `site` and `base` field. See [Astro documentation](https://docs.astro.build/en/reference/configuration-reference/#top-level-options) for more details.
+> In order for your website to deploy to the correct URL, please go to `src/resume_sections/site_info.json` and modify the `domainName` and `basePath` field to your liking. These correlate to `site` and `base` in the Astro config. See [Astro documentation](https://docs.astro.build/en/reference/configuration-reference/#top-level-options) for more details.
 
 After ensuring that your config is correct, execute command `npm run dev` and your project will be serving on host `http://localhost:4321/`. Now you are ready to edit the template! See [How to Edit](#how-to-edit) for details.
 
 ## How to edit
-Modify the `.md` and `user_info.json` files in the ``src/resume_sections`` folder with your information to populate the template. The contents within the `.md` files correspond to individual sections of your resume (eg. Work History, Education, Certifications, etc.)
+Modify the files in  ``src/resume_sections`` with your information to populate the template. The contents within the `.md` files correspond to individual sections of your resume (e.g. Work History, Education, Certifications, etc.); `user_info.json` correspond to the info in the resume header (e.g. download link, social media links, email, phone number); and `site_info.json` corresponds to your page's metadata (e.g. page title, description, favicon, domain name).
 
 ### How to make a new resume section
-Simply make a new `.md` file in the `src/resume_sections` folder and the page will render a new section.
+Simply make a new `.md` file in `src/resume_sections` and the page will render a new section. 
+
+Please be sure to include this frontmatter at the start of each `.md` file, or else the section title will not render:
+```
+---
+title: your section title goes here
+---
+```
 
 ### How to re-order resume sections
 The resume sections are sorted by the filename of the `.md` files (descending order) in the ``src/resume_sections`` folder. I recommend prefixing your `.md` filenames with a number or by alphabet such as `1_sectionname` or `a_sectionname` so that it sorts correctly.
@@ -47,9 +53,9 @@ By default, the resume header uses SVG icons from the Material Design Icons icon
 If you want to use your own custom SVGs or use a different icon set from Iconify, please refer to [astro-icon](https://github.com/natemoo-re/astro-icon?tab=readme-ov-file#usage) documentation.
 
 ### How to change favicon
-By default, the favicon is located under the `public` folder. You could either replace the contents of the existing `favicon.svg` file with your own svg code, or you could make a new `.svg` file in the `public` folder and change `faviconFilePath` to your new file name.
+By default, the favicon is located under the `public` folder. You could either replace the contents of the existing `favicon.svg` file with your own svg code, or you could make a new `.svg` file in the `public` folder and change `faviconFilePath` in `src/resume_sections/site_info.json` to the new file name.
 
-# Resources used
+## Resources used
 - [Astro documentation](https://docs.astro.build/en/getting-started/)
 - [astro-icon documentation](https://github.com/natemoo-re/astro-icon#astro-icon)
 - [Tailwind CSS documentation](https://tailwindcss.com/docs/installation)
