@@ -1,5 +1,5 @@
 ---
-const allResumeSections = await Astro.glob("../resume_sections/*.md");
+const allResumeSections = await Astro.glob("../EDIT_ME/*.md");
 const menuContent = allResumeSections.map((section) => (
   {
     "anchor": "#" + section.frontmatter.title,
@@ -18,4 +18,18 @@ const menuContent = allResumeSections.map((section) => (
   </div>
 </div>
 
-<script src="../scripts/dropdown.js"></script>
+<script is:inline>
+  // src: https://stackoverflow.com/questions/54511902/how-to-use-classlist-toggle-to-show-hide-drop-down-list-content
+
+const dropdownMenu = document.getElementById("dropdown-menu");
+
+document.getElementById("dropdown-button").onclick = () => toggleMenu();
+
+function toggleMenu() {
+  dropdownMenu.classList.toggle('opacity-0');
+  dropdownMenu.classList.toggle('invisible');
+  dropdownMenu.classList.toggle('translate-y-2');
+  document.getElementById("dropdown-icon-down").classList.toggle("hide");
+  document.getElementById("dropdown-icon-up").classList.toggle("show");
+}
+</script>

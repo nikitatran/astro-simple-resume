@@ -1,11 +1,10 @@
 html {
   @apply 
-    bg-slate-100
+    bg-slate-100 dark:bg-slate-950
     w-full md:w-[800px] lg:w-[1000px] 2xl:w-[1250px]
     md:p-[2rem]
     m-auto
     text-xl
-    transition-all
     scroll-smooth
 }
 
@@ -13,13 +12,21 @@ html.dark {
   @apply bg-slate-950
 }
 
+html .astro-code {
+  background-color: #384047 !important
+}
+
+html.dark .astro-code {
+  background-color: #101214 !important;
+}
+
 /* CODE LINES AND BLOCKS */
 pre {
-  @apply rounded-lg p-5
+  @apply rounded-lg p-5 
 }
 
 pre > code{
-  @apply font-normal p-0 bg-transparent dark:bg-transparent
+  @apply font-normal p-0 bg-transparent dark:bg-transparent text-white dark:text-slate-200 
 }
 
 code {
@@ -109,7 +116,7 @@ li {
 }
 
 a {
-  @apply font-semibold underline underline-offset-2 font-manrope tracking-tight transition-all
+  @apply font-semibold underline underline-offset-2 font-manrope tracking-tight
 }
 
 a:hover:not(.dropdown-menu-links):not(#download):not(.iconSocials > a:hover):not(#backtohome) {
@@ -163,23 +170,22 @@ strong {
     px-4 py-2
     dark:bg-slate-600 dark:hover:bg-slate-500 dark:focus:outline-none dark:focus:ring-slate-400 
     font-manrope
-    transition-all
+    transition-all duration-200
 }
 
 #backtotop {
   @apply 
     bg-[hsl(216,33%,55%)] dark:bg-[hsl(216,28%,45%)] 
     p-3 rounded-full text-white dark:text-slate-50
-    transition-all
     fixed bottom-0 right-0 mr-5 mb-5
     drop-shadow-md
 }
 
 #backtotop:hover {
-  @apply -translate-y-2 opacity-100
+  @apply -translate-y-2
 }
 
-.resume-wrapper {
+#resume-wrapper {
   @apply 
   px-3 sm:px-5 py-12 md:p-12 
   md:rounded-lg 
@@ -236,7 +242,7 @@ strong {
 }
 
 #dropdown-menu {
-  @apply bg-slate-200 dark:bg-slate-600 border-4 border-solid border-slate-700 dark:border-slate-950 rounded-lg w-fit p-2 mt-2 z-10 absolute drop-shadow-lg dark:text-white transition-all
+  @apply bg-slate-200 dark:bg-slate-600 border-4 border-solid border-slate-700 dark:border-slate-950 rounded-lg w-fit p-2 mt-2 z-10 absolute drop-shadow-lg dark:text-white
 }
 
 .dropdown-menu-links {

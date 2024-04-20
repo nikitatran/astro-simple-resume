@@ -1,10 +1,9 @@
 ---
-import "../styles.css";
 import NavBar from '../components/NavBar.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 import ResumeHeader from '../components/ResumeHeader.astro';
-import jsonHeader from "../resume_sections/user_info.json";
+import jsonHeader from "../EDIT_ME/user_info.json";
 import BaseLayout from "./BaseLayout.astro";
 ---
 
@@ -12,7 +11,7 @@ import BaseLayout from "./BaseLayout.astro";
 
 	<NavBar />
 
-	<div class = "resume-wrapper">
+	<div id = "resume-wrapper">
 		<ResumeHeader jsonHeader = {jsonHeader}/>
 		<article>
 			<slot />
