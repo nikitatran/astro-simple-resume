@@ -30,7 +30,7 @@ const iconSizeSocials2XL = 35;
             <Icon name={info.iconName} size={iconSizeInfo} style="margin-right: 3px"/>
             {
               info.optionalURL === undefined || info.optionalURL.trim().length === 0 
-              ? <div>{info.text}</div> : <a href={info.optionalURL} class="noLinkStyle">{info.text}</a>
+              ? <div>{info.text}</div> : <a href={info.optionalURL} class="noLinkStyle"><button>{info.text}</button></a>
             }
           </div>
         ))}
@@ -38,7 +38,7 @@ const iconSizeSocials2XL = 35;
 
       <div class = "flex flex-row flex-wrap justify-center mt-2 gap-x-1 iconSocials">
           {jsonLinks?.map(link => (
-              <a href={link.URL}><Icon name={link.iconName} size={iconSizeSocials} /></a>
+              <a href={link.URL}><button><Icon name={link.iconName} size={iconSizeSocials} /></button></a>
           ))}	
       </div>
     </div>
@@ -52,14 +52,22 @@ const iconSizeSocials2XL = 35;
         <Icon class="md:hidden 2xl:block" name={info.iconName} size={iconSizeInfo2XL} style="margin-right: 3px"/>
         {
           info.optionalURL === undefined || info.optionalURL.trim().length === 0 
-          ? <div>{info.text}</div> : <a href={info.optionalURL} class="noLinkStyle">{info.text}</a>
+          ? <div>{info.text}</div> : <a href={info.optionalURL} class="noLinkStyle"><button>{info.text}</button></a>
         }
       </div>
     ))}	
     <div class = "flex flex-row justify-end mt-1 iconSocials">
         {jsonLinks?.map(link => (
-            <a href={link.URL}><Icon class="2xl:hidden" name={link.iconName} size={iconSizeSocials} /></a>
-            <a href={link.URL}><Icon class="md:hidden 2xl:block" name={link.iconName} size={iconSizeSocials2XL} /></a>
+            <a href={link.URL} aria-label={link.label}>
+              <button class="2xl:hidden">
+                <Icon name={link.iconName} size={iconSizeSocials} />
+              </button>
+            </a>
+            <a href={link.URL} aria-label={link.label}>
+              <button class="md:hidden 2xl:block">
+                <Icon name={link.iconName} size={iconSizeSocials2XL} />
+              </button>
+            </a>
         ))}	
     </div>
   </div>

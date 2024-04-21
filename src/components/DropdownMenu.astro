@@ -12,7 +12,7 @@ const menuContent = allResumeSections.map((section) => (
   <div class="flex flex-col">
     {
 			menuContent.map((content) => (
-      <a class = "dropdown-menu-links" href={content.anchor}><div>{content.title}</div></a>
+      <a class = "dropdown-menu-links" href={content.anchor} aria-label={content.title}><button>{content.title}</button></a>
       ))
 		}
   </div>

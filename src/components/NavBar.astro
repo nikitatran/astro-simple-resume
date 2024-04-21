@@ -26,7 +26,7 @@ const iconSize2XL = 25;
       <DropdownMenu />
     </div>
 
-    <a id="download" href={jsonHeader.resumeDownloadURL}>
+    <a id="download" href={jsonHeader.resumeDownloadURL} aria-label="Download resume">
       <button class = "button">
         <div class="iconLabel">
           <div class="hidden sm:block">Download</div>
@@ -36,7 +36,7 @@ const iconSize2XL = 25;
       </button> 
     </a>
 
-    <button class = "button" id="themeToggle">
+    <button class = "button" id="themeToggle" aria-label="Theme toggle">
       <Icon class = "2xl:hidden" name="mdi:sun-moon-stars" size={iconSizeNormal} />
       <Icon class = "hidden 2xl:block" name="mdi:sun-moon-stars" size={iconSize2XL} />
     </button>

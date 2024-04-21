@@ -21,3 +21,10 @@ import BaseLayout from "./BaseLayout.astro";
 	<Footer />
 	<BackToTop />
 </BaseLayout>
+
+<script is:inline>
+	const codeBlocks = document.getElementsByTagName("pre");
+	for (let block of codeBlocks){
+		block.removeAttribute('tabindex')
+	}
+</script>

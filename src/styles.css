@@ -1,19 +1,18 @@
 html {
-  @apply 
-    bg-slate-100 dark:bg-slate-950
+  @apply bg-slate-100 dark:bg-slate-950
     w-full md:w-[800px] lg:w-[1000px] 2xl:w-[1250px]
     md:p-[2rem]
     m-auto
     text-xl
-    scroll-smooth
+    scroll-smooth;
 }
 
 html.dark {
-  @apply bg-slate-950
+  @apply bg-slate-950;
 }
 
 html .astro-code {
-  background-color: #384047 !important
+  background-color: #384047 !important;
 }
 
 html.dark .astro-code {
@@ -22,121 +21,124 @@ html.dark .astro-code {
 
 /* CODE LINES AND BLOCKS */
 pre {
-  @apply rounded-lg p-5 
+  @apply rounded-lg p-5;
 }
 
-pre > code{
-  @apply font-normal p-0 bg-transparent dark:bg-transparent text-white dark:text-slate-200 
+pre > code {
+  @apply font-normal p-0 bg-transparent dark:bg-transparent text-white dark:text-slate-200;
 }
 
 code {
-  @apply 
-    font-mono font-semibold py-1 px-2 rounded-md bg-slate-200 dark:bg-slate-600
+  @apply font-mono font-semibold py-1 px-2 rounded-md bg-slate-200 dark:bg-slate-600;
 }
 /*  */
 
 h1 {
-  @apply 
-    text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl
+  @apply text-3xl xs:text-4xl md:text-5xl 2xl:text-6xl
     font-extrabold
-    text-slate-950 dark:text-slate-50
+    text-slate-950 dark:text-slate-50;
 }
 
 h2 {
-  @apply 
-    text-xl md:text-2xl 2xl:text-3xl
+  @apply text-xl md:text-2xl 2xl:text-3xl
     font-bold
-    text-slate-800 dark:text-slate-200
+    text-slate-800 dark:text-slate-200;
 }
 
 h3 {
-  @apply
-    text-lg md:text-xl 2xl:text-2xl
-    text-slate-500 dark:text-slate-400
+  @apply text-lg md:text-xl 2xl:text-2xl
+    text-slate-500 dark:text-slate-400;
 }
 
-h1, h2, h3 {
-  @apply font-manrope tracking-tight
+h1,
+h2,
+h3 {
+  @apply font-manrope tracking-tight;
 }
 
 hr {
-  @apply mx-4 my-5 border border-dashed border-slate-300 dark:border-slate-700
+  @apply mx-4 my-5 border border-dashed border-slate-300 dark:border-slate-700;
 }
 
 body {
-  @apply text-base 2xl:text-lg xs:break-normal break-all
+  @apply text-base 2xl:text-lg xs:break-normal break-all;
 }
 
 p {
-  @apply leading-relaxed
+  @apply leading-relaxed;
 }
 
 table {
-  @apply w-full
+  @apply w-full;
 }
 
 table th {
-  @apply font-normal
+  @apply font-normal;
 }
 
-table th:last-child, td:last-child {
-  @apply text-right
+table th:last-child,
+td:last-child {
+  @apply text-right;
 }
 
 table th:first-child {
-  @apply text-left
+  @apply text-left;
 }
 
-table td:first-child, th:first-child {
-  @apply align-text-top
+table td:first-child,
+th:first-child {
+  @apply align-text-top;
 }
 
 table td:not(td:first-child):not(td:last-child) {
-  @apply text-center
+  @apply text-center;
 }
 
-ul, ol {
-  @apply list-outside xs:pl-5 sm:pl-10
+ul,
+ol {
+  @apply list-outside xs:pl-5 sm:pl-10;
 }
 
 ol {
-  @apply list-decimal
+  @apply list-decimal;
 }
 
 ul {
-  @apply list-disc
+  @apply list-disc;
 }
 
 ul.contains-task-list {
-  @apply list-none
+  @apply list-none;
 }
 
 li {
-  @apply mt-2
+  @apply mt-2;
 }
 
 a {
-  @apply font-semibold underline underline-offset-2 font-manrope tracking-tight
+  @apply font-semibold underline underline-offset-2 font-manrope tracking-tight;
 }
 
-a:hover:not(.dropdown-menu-links):not(#download):not(.iconSocials > a:hover):not(#backtohome) {
-  @apply bg-slate-200 dark:bg-slate-500 rounded-sm text-slate-950
+a:hover:not(.dropdown-menu-links):not(#download):not(
+    .iconSocials > a:hover
+  ):not(#backtohome) {
+  @apply bg-slate-200 dark:bg-slate-500 rounded-sm text-slate-950;
 }
 
 input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
   position: absolute;
-  margin: .25em 0 0 -1.4em;
+  margin: 0.25em 0 0 -1.4em;
 }
 
 blockquote {
   border-left: 5px;
-  @apply px-3 py-1 border-solid border-slate-400 italic font-semibold bg-slate-200 dark:bg-slate-700 rounded-md
+  @apply px-3 py-1 border-solid border-slate-400 italic font-semibold bg-slate-200 dark:bg-slate-700 rounded-md;
 }
 
 blockquote > p {
-  display:inline;
+  display: inline;
 }
 
 blockquote > p:before {
@@ -147,89 +149,92 @@ blockquote > p:after {
 }
 
 mark {
-  @apply px-1 bg-red-100 dark:bg-red-700 dark:text-slate-100
+  @apply px-1 bg-red-100 dark:bg-red-700 dark:text-slate-100;
 }
 
 strong {
-  @apply font-manrope font-extrabold tracking-tight
+  @apply font-manrope font-extrabold tracking-tight;
 }
 
 /* --- CUSTOM --- */
 
 .button {
-  @apply 
-    text-white 
-    bg-slate-700 hover:bg-slate-800 
-    focus:ring-4 focus:ring-slate-600 
+  @apply text-white 
+    bg-slate-700 hover:bg-slate-800
     font-semibold 
     rounded-full 
     text-xs 2xl:text-sm
     px-4 py-2
-    dark:bg-slate-600 dark:hover:bg-slate-500 dark:focus:outline-none dark:focus:ring-slate-400 
-    font-manrope
+    dark:bg-slate-600 dark:hover:bg-slate-500
+    font-manrope;
+}
+
+.button:focus,
+#backtotop:focus,
+.iconSocials:focus,
+.user-info-links:focus {
+  @apply ring-4 ring-slate-600 dark:outline-none dark:ring-slate-400;
 }
 
 #backtotop {
-  @apply 
-    bg-[hsl(216,33%,55%)] dark:bg-[hsl(216,28%,45%)] 
+  @apply bg-[hsl(216,33%,55%)] dark:bg-[hsl(216,28%,45%)] 
     p-3 rounded-full text-white dark:text-slate-50
     fixed bottom-0 right-0 mr-5 mb-5
-    drop-shadow-md
+    drop-shadow-md;
 }
 
 #backtotop:hover {
-  @apply -translate-y-2
+  @apply -translate-y-2;
 }
 
 #resume-wrapper {
-  @apply 
-  px-3 sm:px-5 py-12 md:p-12 
+  @apply px-3 sm:px-5 py-12 md:p-12 
   md:rounded-lg 
   bg-white dark:bg-slate-900
   border-y-4 md:border-4 border-solid border-slate-300 dark:border-slate-800
-  drop-shadow-md
+  drop-shadow-md;
 }
 
 .sectionTitle {
-  @apply pl-3 xs:pl-0 mb-2
+  @apply pl-3 xs:pl-0 mb-2;
 }
 
 .section {
-  @apply 
-    border-2 border-solid border-slate-200 dark:border-slate-700
+  @apply border-2 border-solid border-slate-200 dark:border-slate-700
     mt-3 mb-10 p-5 
     rounded-lg 
     bg-slate-50 dark:bg-slate-800
-    text-slate-600 dark:text-slate-300
+    text-slate-600 dark:text-slate-300;
 }
 
 .section:last-child {
-  @apply mb-0
+  @apply mb-0;
 }
 
 .iconLabel {
   @apply flex flex-row items-center justify-center 
-  md:justify-end
+  md:justify-end;
 }
 
 .iconSocials {
-  @apply text-slate-400 dark:text-slate-600
+  @apply text-slate-400 dark:text-slate-600;
 }
 
 .iconSocials > a:hover {
-  @apply text-slate-950 dark:text-slate-50
+  @apply text-slate-950 dark:text-slate-50;
 }
 
 .user-info-links {
-  @apply text-xs 2xl:text-sm text-slate-700 dark:text-slate-400 pb-1 md:pl-5
+  @apply text-xs 2xl:text-sm text-slate-700 dark:text-slate-400 pb-1 md:pl-5;
 }
 
 .user-info-links > a {
-  @apply font-sans tracking-normal
+  @apply font-sans tracking-normal;
 }
 
 /* DROPDOWN MENU */
-#dropdown-menu.show, #dropdown-icon-up.show {
+#dropdown-menu.show,
+#dropdown-icon-up.show {
   display: block;
 }
 
@@ -238,28 +243,26 @@ strong {
 }
 
 #dropdown-menu {
-  @apply bg-slate-200 dark:bg-slate-600 border-4 border-solid border-slate-700 dark:border-slate-950 rounded-lg w-fit p-2 mt-2 z-10 absolute drop-shadow-lg dark:text-white
+  @apply bg-slate-200 dark:bg-slate-600 border-4 border-solid border-slate-700 dark:border-slate-950 rounded-lg w-fit p-2 mt-2 z-10 absolute drop-shadow-lg dark:text-white;
 }
 
 .dropdown-menu-links {
-  @apply 
-    no-underline hover:bg-slate-300 hover:dark:bg-slate-700 hover:rounded-lg px-2 py-1 font-semibold
+  @apply no-underline hover:bg-slate-300 hover:dark:bg-slate-700 hover:rounded-lg px-2 py-1 font-semibold;
 }
 /*  */
 
 .footer {
-  @apply text-slate-400 dark:text-slate-500
+  @apply text-slate-400 dark:text-slate-500;
 }
 
 .noLinkStyle {
-  @apply no-underline font-normal
+  @apply no-underline font-normal;
 }
 
 #yourName {
-  @apply text-center md:text-left
+  @apply text-center md:text-left;
 }
 
 #yourTagline {
-  @apply text-center md:text-left mt-5
+  @apply text-center md:text-left mt-5;
 }
-

@@ -12,10 +12,10 @@ import { Icon } from 'astro-icon/components';
   function scrollLogic() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       backToTop.classList.remove('opacity-0', 'invisible')
-      backToTop.classList.add('opacity-55', 'md:opacity-85')
+      backToTop.classList.add('opacity-100')
     } else {
       backToTop.classList.add('opacity-0', 'invisible')
-      backToTop.classList.remove('opacity-55', 'md:opacity-85')
+      backToTop.classList.remove('opacity-100')
     }
   }
 

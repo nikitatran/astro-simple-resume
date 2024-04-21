@@ -9,6 +9,7 @@ export interface JsonHeaderType {
 interface LinkType {
   URL: string;
   iconName: string;
+  label: string;
 }
 
 interface InfoType {

@@ -3,7 +3,7 @@
   "tagline": "Professional Chef and Business Owner",
   "resumeDownloadURL": "https://github.com/nikitatran/astro-simple-resume",
   "info": [
-    { 
+    {
       "text": "bobbyslay@fakeemail.com",
       "iconName": "mdi:email",
       "optionalURL": "mailto:bobbyslay@fakeemail.com"
@@ -20,13 +20,15 @@
     }
   ],
   "links": [
-    { 
+    {
       "URL": "https://github.com/",
-      "iconName": "mdi:github"
+      "iconName": "mdi:github",
+      "label": "Github"
     },
     {
       "URL": "https://linkedin.com/",
-      "iconName": "mdi:linkedin"
+      "iconName": "mdi:linkedin",
+      "label": "Linkedin"
     }
   ]
 }
