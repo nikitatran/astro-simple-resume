@@ -5,12 +5,15 @@ import DropdownMenu from './DropdownMenu.astro';
 
 const iconSizeNormal = 20;
 const iconSize2XL = 25;
+const downloadLabel = "Download resume";
+const toggleLabel = "Toggle theme";
+const dropdownLabel = "Navigation";
 ---
 
 <div class="pt-[1rem] px-[1rem] md:p-0">
   <div class = "flex flex-row items-end mb-3 gap-x-2">
     <div class="flex-auto">
-      <button id = "dropdown-button" class = "button">
+      <button id = "dropdown-button" class = "button" title={dropdownLabel} aria-label={dropdownLabel}>
         <div class="iconLabel">
           <div class="hidden sm:block">Jump to</div>
           <div id = "dropdown-icon-down">
@@ -26,7 +29,7 @@ const iconSize2XL = 25;
       <DropdownMenu />
     </div>
 
-    <a id="download" href={jsonHeader.resumeDownloadURL} aria-label="Download resume">
+    <a title={downloadLabel} id="download" href={jsonHeader.resumeDownloadURL} aria-label={downloadLabel}>
       <button class = "button">
         <div class="iconLabel">
           <div class="hidden sm:block">Download</div>
@@ -36,7 +39,7 @@ const iconSize2XL = 25;
       </button> 
     </a>
 
-    <button class = "button" id="themeToggle" aria-label="Theme toggle">
+    <button title={toggleLabel} class = "button" id="themeToggle" aria-label={toggleLabel}>
       <Icon class = "2xl:hidden" name="mdi:sun-moon-stars" size={iconSizeNormal} />
       <Icon class = "hidden 2xl:block" name="mdi:sun-moon-stars" size={iconSize2XL} />
     </button>

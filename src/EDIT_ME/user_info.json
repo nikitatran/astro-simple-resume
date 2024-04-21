@@ -6,17 +6,20 @@
     {
       "text": "bobbyslay@fakeemail.com",
       "iconName": "mdi:email",
-      "optionalURL": "mailto:bobbyslay@fakeemail.com"
+      "optionalURL": "mailto:bobbyslay@fakeemail.com",
+      "optionalURLLabel": "Email"
     },
     {
       "text": "555-123-1234",
       "iconName": "mdi:cellphone",
-      "optionalURL": "tel:+5551231234"
+      "optionalURL": "tel:+5551231234",
+      "optionalURLLabel": "Phone"
     },
     {
       "text": "Las Vegas, UT",
       "iconName": "mdi:location",
-      "optionalURL": ""
+      "optionalURL": "",
+      "optionalURLLabel": ""
     }
   ],
   "links": [

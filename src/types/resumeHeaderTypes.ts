@@ -16,4 +16,5 @@ interface InfoType {
   text: string;
   iconName: string;
   optionalURL?: string;
+  optionalURLLabel?: string;
 }
