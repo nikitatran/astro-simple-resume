@@ -4,7 +4,6 @@ import icon from "astro-icon";
 import { remarkModifiedTime } from './remark-modified-time.mjs';
 import siteInfo from './src/EDIT_ME/site_info.json';
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), icon()],
   site: siteInfo.domainName,

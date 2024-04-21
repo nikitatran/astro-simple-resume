@@ -60,7 +60,7 @@ h1, h2, h3 {
 }
 
 hr {
-  @apply mx-4 my-5 border border-dashed border-slate-300
+  @apply mx-4 my-5 border border-dashed border-slate-300 dark:border-slate-700
 }
 
 body {
@@ -123,9 +123,6 @@ a:hover:not(.dropdown-menu-links):not(#download):not(.iconSocials > a:hover):not
   @apply bg-slate-200 dark:bg-slate-500 rounded-sm text-slate-950
 }
 
-/* 
-  https://github.com/atom/markdown-preview/pull/428
-  https://sentry.io/answers/how-to-style-a-checkbox-using-css/ */
 input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
@@ -170,7 +167,6 @@ strong {
     px-4 py-2
     dark:bg-slate-600 dark:hover:bg-slate-500 dark:focus:outline-none dark:focus:ring-slate-400 
     font-manrope
-    transition-all duration-200
 }
 
 #backtotop {

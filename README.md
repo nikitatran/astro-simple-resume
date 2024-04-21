@@ -6,12 +6,13 @@ Focused with ease-of-use in mind, you can easily modify all your information fro
 
 ### [Demo Site](https://nikitatran.github.io/astro-simple-resume/)
 
-Feel free to report any issues [here](https://github.com/nikitatran/astro-simple-resume/issues)!
+Feel free to report any issues or propose suggestions [here](https://github.com/nikitatran/astro-simple-resume/issues)!
 
 ## Features
 - Responsiveness for screens > 375px wide
 - Markdown for easy text formatting
 - [astro-icon](https://github.com/natemoo-re/astro-icon) for easy implementation of SVG icons
+  - [Material Design Icons](https://icon-sets.iconify.design/mdi/) pre-installed
 - Section navigation
 - Displays the last time your page was deployed in the footer
 - Auto-detects your system theme on first load
