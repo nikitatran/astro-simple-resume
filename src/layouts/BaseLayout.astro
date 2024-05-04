@@ -9,7 +9,7 @@ let urlPathStr = Astro.url.pathname + "";
 urlPathStr += urlPathStr.endsWith("/") ? "" : "/";
 
 const faviconPath = urlPathStr + siteInfo.faviconFile;
-const faviconURL = urlStr + siteInfo.faviconFile;
+const thumbnail = urlStr + siteInfo.thumbnailImg;
 ---
 <!doctype html>
 <html lang="en">
@@ -17,7 +17,7 @@ const faviconURL = urlStr + siteInfo.faviconFile;
 		<meta charset="UTF-8" />
 		<meta property="og:title" content={siteInfo.pageTitle} />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content={faviconURL} />
+		<meta property="og:image" content={thumbnail} />
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:description" content={siteInfo.pageDescription} />
 		<meta name="twitter:card" content="summary_large_image" />
