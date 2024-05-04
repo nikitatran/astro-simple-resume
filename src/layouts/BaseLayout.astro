@@ -2,7 +2,8 @@
 import "../styles.css";
 import siteInfo from "../EDIT_ME/site_info.json";
 import ThemeToggler from "../components/ThemeToggler.astro"
-const faviconPath = import.meta.env.BASE_URL !== '/' ? import.meta.env.BASE_URL + siteInfo.faviconFilePath : siteInfo.faviconFilePath;
+const faviconPath = Astro.url.pathname + siteInfo.faviconFile;
+const faviconURL = Astro.url + siteInfo.faviconFile;
 ---
 <!doctype html>
 <html lang="en">
@@ -10,8 +11,8 @@ const faviconPath = import.meta.env.BASE_URL !== '/' ? import.meta.env.BASE_URL 
 		<meta charset="UTF-8" />
 		<meta property="og:title" content={siteInfo.pageTitle} />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content={faviconPath} />
-		<meta property="og:url" content={Astro.url.pathname} />
+		<meta property="og:image" content={faviconURL} />
+		<meta property="og:url" content={Astro.url} />
 		<meta property="og:description" content={siteInfo.pageDescription} />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="generator" content={Astro.generator} />

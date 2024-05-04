@@ -1,7 +1,7 @@
 {
   "pageTitle": "Simple Resume Theme Demo Site",
   "pageDescription": "This is a demo site for the Simple Resume Template.",
-  "faviconFilePath": "/favicon.svg",
+  "faviconFile": "favicon.svg",
   "domainName": "https://nikitatran.github.io",
   "basePath": "/astro-simple-resume"
 }
