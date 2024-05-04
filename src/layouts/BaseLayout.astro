@@ -2,8 +2,14 @@
 import "../styles.css";
 import siteInfo from "../EDIT_ME/site_info.json";
 import ThemeToggler from "../components/ThemeToggler.astro"
-const faviconPath = Astro.url.pathname + siteInfo.faviconFile;
-const faviconURL = Astro.url + siteInfo.faviconFile;
+// ensure that URL or path ends with /
+let urlStr = Astro.url + "";
+urlStr += urlStr.endsWith("/") ? "" : "/";
+let urlPathStr = Astro.url.pathname + "";
+urlPathStr += urlPathStr.endsWith("/") ? "" : "/";
+
+const faviconPath = urlPathStr + siteInfo.faviconFile;
+const faviconURL = urlStr + siteInfo.faviconFile;
 ---
 <!doctype html>
 <html lang="en">
